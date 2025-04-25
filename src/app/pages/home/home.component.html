@@ -1,0 +1,491 @@
+<main itemscope itemtype="http://schema.org/Organization">
+  <section class="slider-section">
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide" [class.active]="currentSlide === 0">
+            <div class="slide-overlay"></div>
+            <img src="assets/home/slider-1.png" alt="Premium PP Corrugated Sheets" loading="lazy">
+            <div class="slide-content">
+              <div class="content-wrapper">
+                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Premium PP Corrugated Sheets</span>
+                <h1 data-aos="fade-up" data-aos-delay="200">Welcome to <strong>Ananta Poly Plast</strong></h1>
+                <p data-aos="fade-up" data-aos-delay="300">Experience unmatched quality with our premium PP corrugated sheets and boxes, engineered for excellence.</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="/products" class="btn btn-primary">Explore Products</a>
+                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide" [class.active]="currentSlide === 1">
+            <div class="slide-overlay"></div>
+            <img src="assets/home/slider-2.jpg" alt="Corrugated Plastic Boxes" loading="lazy">
+            <div class="slide-content">
+              <div class="content-wrapper">
+                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Innovative Packaging Solutions</span>
+                <h2 data-aos="fade-up" data-aos-delay="200">Corrugated Plastic Boxes</h2>
+                <p data-aos="fade-up" data-aos-delay="300">Discover our durable and lightweight corrugated plastic boxes for all your packaging needs.</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="/products" class="btn btn-primary">View Products</a>
+                  <a href="/contact" class="btn btn-outline">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide" [class.active]="currentSlide === 2">
+            <div class="slide-overlay"></div>
+            <img src="assets/home/slider-3.jpg" alt="PP Sunpack Sheets" loading="lazy">
+            <div class="slide-content">
+              <div class="content-wrapper">
+                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Eco-Friendly Materials</span>
+                <h2 data-aos="fade-up" data-aos-delay="200">PP Sunpack Sheets</h2>
+                <p data-aos="fade-up" data-aos-delay="300">Leading the way in sustainable packaging with environmentally conscious materials and practices.</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="/sustainability" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide" [class.active]="currentSlide === 3">
+            <div class="slide-overlay"></div>
+            <img src="assets/home/slider-1.png" alt="Custom Corrugated Solutions" loading="lazy">
+            <div class="slide-content">
+              <div class="content-wrapper">
+                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Tailored Excellence</span>
+                <h2 data-aos="fade-up" data-aos-delay="200">Custom Corrugated Solutions</h2>
+                <p data-aos="fade-up" data-aos-delay="300">Custom-crafted corrugated products that perfectly match your packaging requirements.</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="/custom-solutions" class="btn btn-primary">View Solutions</a>
+                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="slide" [class.active]="currentSlide === 4">
+            <div class="slide-overlay"></div>
+            <img src="assets/home/slider-2.jpg" alt="PP Flute Boards" loading="lazy">
+            <div class="slide-content">
+              <div class="content-wrapper">
+                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Professional Quality</span>
+                <h2 data-aos="fade-up" data-aos-delay="200">PP Flute Boards</h2>
+                <p data-aos="fade-up" data-aos-delay="300">Premium PP flute boards for signage, packaging, and construction applications.</p>
+                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
+                  <a href="/products" class="btn btn-primary">Learn More</a>
+                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enhanced Navigation Controls -->
+        <div class="slider-controls">
+          <button class="nav-btn prev" (click)="prevSlide()" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nav-btn next" (click)="nextSlide()" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Slide Indicators -->
+        <div class="slide-indicators">
+          <button *ngFor="let slide of slides; let i = index" 
+                  [class.active]="currentSlide === i"
+                  (click)="goToSlide(i)"
+                  [attr.aria-label]="'Go to slide ' + (i + 1)">
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-image" data-aos="fade-right">
+          <img src="assets/home/automobile.jpg" alt="Ananta Poly Plast Manufacturing" loading="lazy">
+          <div class="experience-badge">
+            <span class="years">{{experienceText}}</span>
+            <span class="text">Years of Excellence</span>
+          </div>
+        </div>
+        
+        <div class="about-content" data-aos="fade-left">
+          <span class="about-subtitle">About Us</span>
+          <h2 class="section-title">Leading <strong>PP Corrugated Products</strong> Manufacturer</h2>
+          
+          <div class="about-description">
+            <p>
+              Since 2020, <strong>Ananta Poly Plast</strong> has established itself as a premier manufacturer of high-quality PP corrugated sheets and boxes in Rajkot, Gujarat. Our state-of-the-art manufacturing facility produces a wide range of corrugated plastic products that combine durability, lightweight properties, and environmental sustainability.
+            </p>
+          </div>
+          
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Premium Quality Materials</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Custom Manufacturing</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Eco-Friendly Solutions</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Nationwide Delivery</span>
+            </div>
+          </div>
+          
+          <div class="about-cta">
+            <a routerLink="/about" class="btn btn-primary">Our Story</a>
+            <a routerLink="/contact" class="btn btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-highlights-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Premium Corrugated Products</span>
+        <h2 class="section-title">Our Top Solutions</h2>
+      </div>
+      
+      <div class="highlights-grid">
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>PP Corrugated Sheets</h3>
+          <p>Versatile, lightweight and durable sheets for packaging needs</p>
+          <a href="/products/pp-corrugated-sheets" class="card-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3>Corrugated Plastic Boxes</h3>
+          <p>Sturdy, reusable boxes perfect for storage and shipping</p>
+          <a href="/products/pp-corrugated-boxes" class="card-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">
+            <i class="fas fa-fill-drip"></i>
+          </div>
+          <h3>PP Sunpack Sheets</h3>
+          <p>Smooth-surface sheets ideal for printing and displays</p>
+          <a href="/products/pp-sunpack-sheets" class="card-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="highlight-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon">
+            <i class="fas fa-th-large"></i>
+          </div>
+          <h3>PP Flute Boards</h3>
+          <p>Rigid yet lightweight boards for signage and displays</p>
+          <a href="/products/pp-flute-boards" class="card-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-choose-section" itemprop="hasOfferCatalog" itemscope itemtype="http://schema.org/OfferCatalog">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Our Advantages</span>
+        <h2 class="section-title">Why Choose Ananta Poly Plast</h2>
+        <p class="section-description">Experience excellence in every aspect of our premium corrugated plastic solutions</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card" *ngFor="let feature of features" 
+             data-aos="fade-up"
+             [attr.data-aos-delay]="feature.aosDelay">
+          <div class="icon-wrapper">
+            <i [class]="feature.icon"></i>
+          </div>
+          <h3>{{feature.title}}</h3>
+          <p>{{feature.description}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- <section class="products-section" itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Our Product Catalog</span>
+        <h2 class="section-title">Premium Products</h2>
+        <p class="section-description">Explore our comprehensive range of PP corrugated products designed for various applications</p>
+      </div>
+      
+      <div class="products-grid">
+        <div class="product-card" *ngFor="let product of products" 
+             [attr.data-aos]="'fade-up'"
+             [attr.data-aos-delay]="product.aosDelay">
+          <div class="product-image">
+            <img [src]="product.image" [alt]="product.title" loading="lazy">
+            <div class="product-overlay">
+              <a [routerLink]="product.link" class="overlay-btn">View Details</a>
+            </div>
+          </div>
+          <div class="product-content">
+            <h3>{{product.title}}</h3>
+            <p>{{product.description}}</p>
+            <a [routerLink]="product.link" class="product-link">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="products-cta" data-aos="fade-up">
+        <a routerLink="/products" class="btn btn-primary">View All Products</a>
+      </div>
+    </div>
+  </section> -->
+  
+  <section class="applications-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Industries We Serve</span>
+        <h2 class="section-title">Versatile Applications</h2>
+        <p class="section-description">Our PP corrugated products are used across various industries for different applications</p>
+      </div>
+      
+      <div class="applications-grid" data-aos="fade-up">
+        <div class="application-item">
+          <div class="app-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <h4>Packaging</h4>
+        </div>
+        
+        <div class="application-item">
+          <div class="app-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h4>Logistics</h4>
+        </div>
+        
+        <div class="application-item">
+          <div class="app-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h4>Retail</h4>
+        </div>
+        
+        <div class="application-item">
+          <div class="app-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h4>Manufacturing</h4>
+        </div>
+        
+        <div class="application-item">
+          <div class="app-icon">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h4>Construction</h4>
+        </div>
+        
+        <div class="application-item">
+          <div class="app-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h4>Agriculture</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="manufacturing-section">
+    <div class="container">
+      <div class="manufacturing-grid">
+        <div class="manufacturing-content" data-aos="fade-right">
+          <span class="section-subtitle">Our Process</span>
+          <h2 class="section-title">Advanced Manufacturing</h2>
+          <p class="section-description">
+            Our state-of-the-art manufacturing process ensures the highest quality in every PP corrugated product we create.
+          </p>
+          
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">01</div>
+              <div class="step-content">
+                <h4>Material Selection</h4>
+                <p>We select the finest PP materials for optimal performance</p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">02</div>
+              <div class="step-content">
+                <h4>Precision Engineering</h4>
+                <p>Advanced machinery ensures precise dimensions and quality</p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">03</div>
+              <div class="step-content">
+                <h4>Quality Testing</h4>
+                <p>Rigorous testing guarantees durability and performance</p>
+              </div>
+            </div>
+            
+            <div class="process-step">
+              <div class="step-number">04</div>
+              <div class="step-content">
+                <h4>Custom Finishing</h4>
+                <p>Tailored finishing to meet your specific requirements</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="manufacturing-cta">
+            <a routerLink="/manufacturing" class="btn btn-primary">Our Capabilities</a>
+          </div>
+        </div>
+        
+        <div class="manufacturing-image" data-aos="fade-left">
+          <img src="assets/home/automobile.jpg" alt="Ananta Poly Plast Manufacturing Process" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-subtitle">Client Feedback</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+      </div>
+      
+      <div class="testimonials-grid" data-aos="fade-up">
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "Ananta Poly Plast's PP corrugated sheets have significantly improved our packaging efficiency while reducing material costs. Excellent product quality!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4></h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "Their custom corrugated boxes perfectly meet our specifications. The durability and water resistance have greatly enhanced our product protection during transit."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4></h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="quote-icon">
+            <i class="fas fa-quote-left"></i>
+          </div>
+          <p class="testimonial-text">
+            "We've been using Ananta's PP flute boards for our retail displays for over a year. The quality is consistent, and their customer service is exceptional."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4></h4>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="catalogue-cta-section">
+    <div class="container">
+      <div class="cta-content" data-aos="fade-up">
+        <div class="cta-grid">
+          <div class="cta-image">
+            <img src="assets/home/catalogue.jpg" alt="Ananta Poly Plast Product Catalogue" loading="lazy">
+          </div>
+          
+          <div class="cta-text">
+            <span class="section-subtitle">Product Guide</span>
+            <h2 class="section-title">Download Our Product Catalogue</h2>
+            <p>Explore our complete range of premium PP corrugated sheets, boxes, and packaging solutions with detailed specifications and applications.</p>
+            
+            <div class="cta-buttons">
+              <a routerLink="/catalogue" class="btn btn-primary">
+                <i class="fas fa-eye"></i>
+                <span>View Online</span>
+              </a> &nbsp;&nbsp;
+              <a href="/assets/catalogue.pdf" download class="btn btn-outline">
+                <i class="fas fa-download"></i>
+                <span>Download PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact-cta-section">
+    <div class="container">
+      <div class="contact-wrapper" data-aos="fade-up">
+        <div class="contact-content">
+          <h2>Ready to Get Started?</h2>
+          <p>Contact us today to discuss your requirements for premium PP corrugated products.</p>
+        </div>
+        <div class="contact-buttons">
+          <a routerLink="/contact" class="btn btn-primary">Contact Us</a>
+          <a href="tel:+911234567890" class="btn btn-outline">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 12345 67890</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
