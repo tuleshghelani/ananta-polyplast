@@ -1,20 +1,35 @@
 <main itemscope itemtype="http://schema.org/Organization">
-  <section class="slider-section">
+  <section class="hero-slider">
     <div class="slider-container">
       <div class="slider">
-        <div class="slides">
+        <!-- Slides Container -->
+        <div class="slides-wrapper">
           <!-- Slide 1 -->
           <div class="slide" [class.active]="currentSlide === 0">
-            <div class="slide-overlay"></div>
-            <img src="assets/home/slider-1.png" alt="Premium PP Corrugated Sheets" loading="lazy">
+            <div class="slide-background">
+              <img src="assets/home/slider-1.png" alt="Premium PP Corrugated Sheets" loading="lazy">
+              <div class="slide-overlay">
+                <div class="overlay-gradient"></div>
+                <div class="overlay-pattern"></div>
+              </div>
+            </div>
             <div class="slide-content">
-              <div class="content-wrapper">
-                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Premium PP Corrugated Sheets</span>
-                <h1 data-aos="fade-up" data-aos-delay="200">Welcome to <strong>Ananta Poly Plast</strong></h1>
-                <p data-aos="fade-up" data-aos-delay="300">Experience unmatched quality with our premium PP corrugated sheets and boxes, engineered for excellence.</p>
-                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
-                  <a href="/products" class="btn btn-primary">Explore Products</a>
-                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+              <div class="content-inner" data-aos="fade-up">
+                <div class="content-tag">
+                  <span class="tag-line"></span>
+                  <span class="tag-text">Industry Leading</span>
+                  <span class="tag-line"></span>
+                </div>
+                <h1 class="slide-title">Premium <span class="text-highlight">PP Corrugated</span> Sheets</h1>
+                <p class="slide-description">Experience unmatched durability and versatility with our premium corrugated sheets designed for superior performance.</p>
+                <div class="slide-actions">
+                  <a href="/products" class="btn btn-primary">
+                    <span>Explore Products</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="/contact" class="btn btn-outline">
+                    <span>Get Quote</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -22,16 +37,30 @@
 
           <!-- Slide 2 -->
           <div class="slide" [class.active]="currentSlide === 1">
-            <div class="slide-overlay"></div>
-            <img src="assets/home/slider-2.jpg" alt="Corrugated Plastic Boxes" loading="lazy">
+            <div class="slide-background">
+              <img src="assets/home/slider-2.jpg" alt="Corrugated Plastic Boxes" loading="lazy">
+              <div class="slide-overlay">
+                <div class="overlay-gradient"></div>
+                <div class="overlay-pattern"></div>
+              </div>
+            </div>
             <div class="slide-content">
-              <div class="content-wrapper">
-                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Innovative Packaging Solutions</span>
-                <h2 data-aos="fade-up" data-aos-delay="200">Corrugated Plastic Boxes</h2>
-                <p data-aos="fade-up" data-aos-delay="300">Discover our durable and lightweight corrugated plastic boxes for all your packaging needs.</p>
-                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
-                  <a href="/products" class="btn btn-primary">View Products</a>
-                  <a href="/contact" class="btn btn-outline">Contact Us</a>
+              <div class="content-inner" data-aos="fade-up">
+                <div class="content-tag">
+                  <span class="tag-line"></span>
+                  <span class="tag-text">Innovative Solutions</span>
+                  <span class="tag-line"></span>
+                </div>
+                <h2 class="slide-title">Industrial-Grade <span class="text-highlight">Plastic Boxes</span></h2>
+                <p class="slide-description">Custom-designed corrugated plastic boxes that combine lightweight construction with exceptional durability for all your packaging needs.</p>
+                <div class="slide-actions">
+                  <a href="/products" class="btn btn-primary">
+                    <span>View Products</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="/contact" class="btn btn-outline">
+                    <span>Contact Us</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -39,16 +68,30 @@
 
           <!-- Slide 3 -->
           <div class="slide" [class.active]="currentSlide === 2">
-            <div class="slide-overlay"></div>
-            <img src="assets/home/slider-3.jpg" alt="PP Sunpack Sheets" loading="lazy">
+            <div class="slide-background">
+              <img src="assets/home/slider-3.jpg" alt="PP Sunpack Sheets" loading="lazy">
+              <div class="slide-overlay">
+                <div class="overlay-gradient"></div>
+                <div class="overlay-pattern"></div>
+              </div>
+            </div>
             <div class="slide-content">
-              <div class="content-wrapper">
-                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Eco-Friendly Materials</span>
-                <h2 data-aos="fade-up" data-aos-delay="200">PP Sunpack Sheets</h2>
-                <p data-aos="fade-up" data-aos-delay="300">Leading the way in sustainable packaging with environmentally conscious materials and practices.</p>
-                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
-                  <a href="/sustainability" class="btn btn-primary">Learn More</a>
-                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+              <div class="content-inner" data-aos="fade-up">
+                <div class="content-tag">
+                  <span class="tag-line"></span>
+                  <span class="tag-text">Eco-Friendly Materials</span>
+                  <span class="tag-line"></span>
+                </div>
+                <h2 class="slide-title">Superior <span class="text-highlight">PP Sunpack</span> Sheets</h2>
+                <p class="slide-description">Environmentally responsible packaging solutions with our recyclable PP sheets that don't compromise on quality or performance.</p>
+                <div class="slide-actions">
+                  <a href="/sustainability" class="btn btn-primary">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="/contact" class="btn btn-outline">
+                    <span>Get Quote</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -56,16 +99,30 @@
 
           <!-- Slide 4 -->
           <div class="slide" [class.active]="currentSlide === 3">
-            <div class="slide-overlay"></div>
-            <img src="assets/home/slider-1.png" alt="Custom Corrugated Solutions" loading="lazy">
+            <div class="slide-background">
+              <img src="assets/home/slider-1.png" alt="Custom Corrugated Solutions" loading="lazy">
+              <div class="slide-overlay">
+                <div class="overlay-gradient"></div>
+                <div class="overlay-pattern"></div>
+              </div>
+            </div>
             <div class="slide-content">
-              <div class="content-wrapper">
-                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Tailored Excellence</span>
-                <h2 data-aos="fade-up" data-aos-delay="200">Custom Corrugated Solutions</h2>
-                <p data-aos="fade-up" data-aos-delay="300">Custom-crafted corrugated products that perfectly match your packaging requirements.</p>
-                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
-                  <a href="/custom-solutions" class="btn btn-primary">View Solutions</a>
-                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+              <div class="content-inner" data-aos="fade-up">
+                <div class="content-tag">
+                  <span class="tag-line"></span>
+                  <span class="tag-text">Tailored Excellence</span>
+                  <span class="tag-line"></span>
+                </div>
+                <h2 class="slide-title">Custom <span class="text-highlight">Engineering</span> Solutions</h2>
+                <p class="slide-description">Bespoke corrugated products meticulously crafted to your exact specifications, ensuring perfect fit for your unique requirements.</p>
+                <div class="slide-actions">
+                  <a href="/custom-solutions" class="btn btn-primary">
+                    <span>View Solutions</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="/contact" class="btn btn-outline">
+                    <span>Get Quote</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -73,39 +130,62 @@
 
           <!-- Slide 5 -->
           <div class="slide" [class.active]="currentSlide === 4">
-            <div class="slide-overlay"></div>
-            <img src="assets/home/slider-2.jpg" alt="PP Flute Boards" loading="lazy">
+            <div class="slide-background">
+              <img src="assets/home/slider-2.jpg" alt="PP Flute Boards" loading="lazy">
+              <div class="slide-overlay">
+                <div class="overlay-gradient"></div>
+                <div class="overlay-pattern"></div>
+              </div>
+            </div>
             <div class="slide-content">
-              <div class="content-wrapper">
-                <span class="subtitle" data-aos="fade-up" data-aos-delay="100">Professional Quality</span>
-                <h2 data-aos="fade-up" data-aos-delay="200">PP Flute Boards</h2>
-                <p data-aos="fade-up" data-aos-delay="300">Premium PP flute boards for signage, packaging, and construction applications.</p>
-                <div class="cta-buttons" data-aos="fade-up" data-aos-delay="400">
-                  <a href="/products" class="btn btn-primary">Learn More</a>
-                  <a href="/contact" class="btn btn-outline">Get Quote</a>
+              <div class="content-inner" data-aos="fade-up">
+                <div class="content-tag">
+                  <span class="tag-line"></span>
+                  <span class="tag-text">Professional Quality</span>
+                  <span class="tag-line"></span>
+                </div>
+                <h2 class="slide-title">Advanced <span class="text-highlight">PP Flute</span> Boards</h2>
+                <p class="slide-description">High-performance flute boards designed for signage, construction, and packaging applications where strength and durability are paramount.</p>
+                <div class="slide-actions">
+                  <a href="/products" class="btn btn-primary">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-right"></i>
+                  </a>
+                  <a href="/contact" class="btn btn-outline">
+                    <span>Get Quote</span>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Enhanced Navigation Controls -->
-        <div class="slider-controls">
-          <button class="nav-btn prev" (click)="prevSlide()" aria-label="Previous slide">
-            <i class="fas fa-chevron-left"></i>
+        <!-- Premium Navigation Controls -->
+        <div class="slider-navigation">
+          <button class="nav-arrow prev" (click)="prevSlide()" aria-label="Previous slide">
+            <i class="fas fa-long-arrow-alt-left"></i>
           </button>
-          <button class="nav-btn next" (click)="nextSlide()" aria-label="Next slide">
-            <i class="fas fa-chevron-right"></i>
+          
+          <div class="nav-indicators">
+            <div class="indicators-container">
+              <button *ngFor="let slide of slides; let i = index"
+                      [class.active]="currentSlide === i"
+                      (click)="goToSlide(i)"
+                      [attr.aria-label]="'Go to slide ' + (i + 1)">
+                <span class="indicator-number">0{{i+1}}</span>
+                <span class="indicator-progress"></span>
+              </button>
+            </div>
+          </div>
+          
+          <button class="nav-arrow next" (click)="nextSlide()" aria-label="Next slide">
+            <i class="fas fa-long-arrow-alt-right"></i>
           </button>
         </div>
 
-        <!-- Slide Indicators -->
-        <div class="slide-indicators">
-          <button *ngFor="let slide of slides; let i = index" 
-                  [class.active]="currentSlide === i"
-                  (click)="goToSlide(i)"
-                  [attr.aria-label]="'Go to slide ' + (i + 1)">
-          </button>
+        <!-- Slide Progress Bar -->
+        <div class="slide-progress">
+          <div class="progress-bar" [style.width.%]="(currentSlide + 1) * (100 / slides.length)"></div>
         </div>
       </div>
     </div>
@@ -484,7 +564,7 @@
         </div>
         <div class="contact-buttons">
           <a routerLink="/contact" class="btn btn-primary">Contact Us</a>
-          <a href="tel:+917778020805" class="btn btn-outline">
+          <a href="tel:+917778020805" class="btn btn-primary">
             <i class="fas fa-phone-alt"></i>
             <span>+91 77780 20805</span>
           </a>
