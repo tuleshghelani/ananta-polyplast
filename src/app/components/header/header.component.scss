@@ -202,6 +202,16 @@
       }
     }
     
+    // Nav and Actions Container
+    .nav-and-actions {
+      @include flex(flex-end, center);
+      margin-left: auto;
+      
+      @include mobile {
+        justify-content: flex-end;
+      }
+    }
+    
     // Logo Area
     .logo-wrapper {
       .logo-link {
@@ -315,6 +325,7 @@
     .action-buttons {
       @include flex;
       gap: 1.5rem;
+      margin-left: 1.5rem;
       
       .cta-button {
         @include flex;
