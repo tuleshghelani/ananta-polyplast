@@ -4,9 +4,9 @@
 @import '../../../styles.scss';
 
 // Footer-specific variables - using global blue theme
-$footer-bg: $accent;
+$footer-bg: linear-gradient(135deg, $primary 60%, $secondary 100%);
 $footer-text: $neutral-lighter;
-$footer-link: $text-white;
+$footer-link: $primary-light;
 $footer-border: rgba($primary-light, 0.1);
 
 // Mixins
@@ -37,7 +37,7 @@ $large-desktop: 1200px;
 }
 
 .premium-footer {
-  background: linear-gradient(to bottom, darken($accent, 5%), $accent);
+  // background: linear-gradient(to bottom, darken($primary, 5%), $primary);
   color: $footer-text;
   font-family: $font-primary;
   padding: 4rem 0 0;
@@ -127,7 +127,7 @@ $large-desktop: 1200px;
       line-height: 1.7;
       margin-bottom: 1.75rem;
       font-size: 1rem;
-      color: $neutral-lighter;
+      color: #000;
       max-width: 90%;
 
       @include mobile {
@@ -257,7 +257,7 @@ $large-desktop: 1200px;
       margin-bottom: 0.875rem;
 
       a {
-        color: $footer-link;
+        color: #000;
         text-decoration: none;
         display: inline-block;
         position: relative;
@@ -336,7 +336,7 @@ $large-desktop: 1200px;
         }
 
         a {
-          color: $footer-text;
+          color: #000;
           text-decoration: none;
           transition: all 0.3s ease;
           font-size: 1rem;
@@ -373,7 +373,7 @@ $large-desktop: 1200px;
     .copyright {
       margin: 0;
       font-size: 0.95rem;
-      color: $neutral-light;
+      color: #000;
     }
 
     .credits {
