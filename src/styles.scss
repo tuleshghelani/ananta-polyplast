@@ -27,7 +27,7 @@ $neutral-lighter: #e2e6e5;
 $neutral-lightest: #f5f7f7;
 
 // Additional Professional Colors
-$accent: #2c4e50; // Deep teal-gray for text and accents
+$accent: #000; // Deep teal-gray for text and accents
 $success: #27ae60; // Success states
 $warning: #f39c12; // Warning states
 $error: #e74c3c; // Error states
@@ -72,7 +72,7 @@ $shadow-color-dark: rgba(0, 0, 0, 0.2);
 
 // Global styles
 body {
-  color: $text-primary;
+  color: #fff;
   background: $background-primary;
   font-family: $font-body;
   font-weight: $weight-regular;

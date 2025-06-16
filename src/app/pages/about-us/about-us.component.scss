@@ -1,0 +1,278 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+main {
+  width: 100%;
+  background: $background-primary;
+  color: $text-primary;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+$text-white: #fff;
+$accent: #a0293a;
+
+.about-hero {
+  background: linear-gradient(rgba($primary, 0.85), rgba($primary, 0.85)), url('/assets/images/hero-bg.jpg') center/cover;
+  padding: 5rem 0 3rem 0;
+  text-align: center;
+  color: $text-white;
+  margin-top: 2rem;
+
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .hero-title {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      .text-highlight {
+        color: #fff;
+      }
+    }
+    .hero-description {
+      font-size: 1.25rem;
+      color: $text-white;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.company-overview {
+  padding: 4rem 0;
+  background: $background-secondary;
+
+  .container {
+    @include container-width;
+  }
+
+  .overview-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .overview-image {
+    flex: 1 1 350px;
+    position: relative;
+    min-width: 300px;
+    max-width: 420px;
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba($primary, 0.08);
+      display: block;
+    }
+
+    .experience-badge {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: $primary;
+      color: $text-white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba($primary, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .years {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+      .text {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  .overview-content {
+    flex: 2 1 400px;
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: $primary;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: $primary-dark;
+    }
+    .overview-description {
+      font-size: 1.1rem;
+      color: $text-secondary;
+      margin-bottom: 1.5rem;
+      p {
+        margin-bottom: 0.7rem;
+      }
+    }
+    .company-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+      .stat-item {
+        text-align: center;
+        .stat-number {
+          font-size: 2rem;
+          font-weight: 700;
+          color: $accent;
+        }
+        .stat-label {
+          font-size: 1rem;
+          color: $text-secondary;
+        }
+      }
+      @media (max-width: 600px) {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+    }
+  }
+}
+
+.our-values-section {
+  padding: 4rem 0;
+  background: $background-primary;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    .section-subtitle {
+      color: $primary;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      color: $primary-dark;
+    }
+    .section-description {
+      color: $text-secondary;
+      font-size: 1.1rem;
+    }
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    @media (max-width: 991px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
+    .value-card {
+      background: $background-secondary;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba($primary, 0.06);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: box-shadow 0.2s;
+      &:hover {
+        box-shadow: 0 8px 32px rgba($primary, 0.12);
+      }
+      i {
+        font-size: 2.2rem;
+        color: $accent;
+        margin-bottom: 1rem;
+      }
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.7rem;
+        color: $primary;
+      }
+      p {
+        font-size: 1rem;
+        color: $text-secondary;
+      }
+    }
+  }
+}
+
+.about-contact-cta {
+  background: linear-gradient(90deg, $primary 60%, $accent 100%);
+  color: $text-white;
+  padding: 3rem 0;
+
+  .cta-wrapper {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      a.btn {
+        min-width: 160px;
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background 0.2s, color 0.2s;
+        &.btn-primary {
+          background: $accent;
+          color: $text-white;
+          border: none;
+          &:hover {
+            background: darken($accent, 8%);
+          }
+        }
+        &.btn-outline {
+          background: transparent;
+          color: $text-white;
+          border: 2px solid $text-white;
+          &:hover {
+            background: $text-white;
+            color: $primary;
+          }
+        }
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
