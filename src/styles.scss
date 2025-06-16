@@ -6,18 +6,18 @@
 @import './styles/fix-layout.scss';
 
 // Primary Colors - Teal theme representing professionalism, creativity, and trust
-$primary: #2c959d; // Teal (derived from but not exactly #3da1a8)
-$primary-light: #4db6be;
-$primary-lighter: #73c9cf;
-$primary-lightest: #9adee2;
-$primary-dark: #1c7378;
+$primary: #a0293a;      // Main brand blue
+$primary-light: #c13d4f; // Lighter blue
+$primary-lighter: #d45d6d; // Even lighter blue
+$primary-lightest: #e88d99; // Lightest blue
+$primary-dark: #7a1f2c;
 
 // Secondary Colors - Deep Purple-Blue for luxury and premium feel
-$secondary: #3d5ba8; // Deep Blue-Purple 
-$secondary-light: #5a77c4;
-$secondary-lighter: #7c95d8;
-$secondary-lightest: #a3b6e8;
-$secondary-dark: #2a4182;
+$secondary: #2D1B1C;      // Deep brown/almost black
+$secondary-light: #3D2526;    // Lighter brown
+$secondary-lighter: #4D2F30;  // Medium brown
+$secondary-lightest: #5D393A; // Lightest brown
+$secondary-dark: #1D1112; 
 
 // Neutral Colors - Professional grays with subtle teal undertones
 $neutral-dark: #414544;
